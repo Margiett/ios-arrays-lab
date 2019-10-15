@@ -10,6 +10,14 @@ Create an array of strings called `colors` that contain "orange", "red", "yellow
 
 Then, using array subscripting and string interpolation, print out the String `"orange, yellow, and lavender are some of my favorite colors"`.
 
+My Answer is 
+var colors: [String]
+
+colors = ["orange", "red", "yellow", "turquoise", "lavender"]
+print(colors[0],colors[2],colors[4])
+
+print("My favorite colors are \(colors.count) countries on my bucket list")
+
 
 ## Question 2
 
@@ -17,6 +25,10 @@ Remove "Illinois" and "Kansas" from the array below.
 
 `var westernStates = ["California", "Oregon", "Washington", "Idaho", "Illinois", "Kansas"]`
 
+var westernStates = ["California", "Oregon", "Washington", "Idaho", "Illinois", "Kansas"]
+
+westernStates.remove(at:4)
+westernStates.remove(at: 5)
 
 ## Question 3
 
@@ -192,6 +204,27 @@ Given an array of Strings, find the the String with the most "a"s in it.
 input: `["apes", "abba", "apple"]`
 
 output: `"abba"`
+
+var arr: [String]
+let arr = ["apes”, “abba”, “apple”]
+
+var overAllCount = 0
+var stringWithMostAs = ""
+for str in arr {
+  var localCount = " "
+    in str {
+    if char == "a” {
+           localCount += 1
+           
+       }
+   }
+   if localCount > overAllCount {
+       overAllCount = localCount
+       stringWithMostAs = str
+       print(“NOW current amount of a’s is \(localCount)“)
+   }
+}
+print(“\(stringWithMostAs) has the most a’s which has a count of \(overAllCount)“)
 
 
 ## Question 7
