@@ -25,6 +25,8 @@ Remove "Illinois" and "Kansas" from the array below.
 
 `var westernStates = ["California", "Oregon", "Washington", "Idaho", "Illinois", "Kansas"]`
 
+My answer:
+
 var westernStates = ["California", "Oregon", "Washington", "Idaho", "Illinois", "Kansas"]
 
 westernStates.remove(at:4)
