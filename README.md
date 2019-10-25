@@ -11,13 +11,14 @@ Create an array of strings called `colors` that contain "orange", "red", "yellow
 Then, using array subscripting and string interpolation, print out the String `"orange, yellow, and lavender are some of my favorite colors"`.
 
 My Answer is 
+```
 var colors: [String]
 
 colors = ["orange", "red", "yellow", "turquoise", "lavender"]
 print(colors[0],colors[2],colors[4])
 
 print("My favorite colors are \(colors.count) countries on my bucket list")
-
+```
 
 ## Question 2
 
@@ -26,22 +27,49 @@ Remove "Illinois" and "Kansas" from the array below.
 `var westernStates = ["California", "Oregon", "Washington", "Idaho", "Illinois", "Kansas"]`
 
 My answer:
-
+```
 var westernStates = ["California", "Oregon", "Washington", "Idaho", "Illinois", "Kansas"]
 
 westernStates.remove(at:4)
 westernStates.remove(at: 5)
+```
 
 ## Question 3
 
 Iterate through the array below. For each state, print out the name of the state, a colon, and whether it is or is not **in the continental United States.**
 
-`let moreStates = ["Hawaii", "New Mexico", "Alaska", "Montana", "Texas", "New York", "Florida"]`
+1. Reread the question and underline the task
+- print out the name of the states, with colon 
+- iterate through the array 
+2. Define the vocab
+- array :
+3. Find the input and output
+4. Identify what you do know
+5. list the coding steps, run, and refactor
+
+interperlation: when you add it to a string 
+
+not in the continental : Hawaii, & Alaska 
+
+```
+let moreStates = ["Hawaii", "New Mexico", "Alaska", "Montana", "Texas", "New York", "Florida"]
+
+let dateBase["Alaska", "New Mexico","Texas","Montana","New York","Florida"]
+for eachState in moreState {
+if dateBase.contain(eachState) {
+print("\(eachState): is in the cont US")
+} else {
+print("\(eachState): is not in the contental US")"
+}
+}
+
+
 
 
 ## Question 4
 
-Print out how many non-whitespace characters are in `myString`:
+Print out how many non
+-whitespace characters are in `myString`:
 
 `let myString = "This is good practice with Strings!"`
 
@@ -69,6 +97,20 @@ The below array represents an unfinished batting lineup for a baseball team. **Y
 - Put "Reyes" to bat 8th instead.
 
 `var battingLineup = ["Reyes", "Jeter", "Ramirez", "Pujols","Griffey","Thomas","Jones", "Rodriguez"]`
+```
+var battingLineup = ["Reyes", "Jeter", "Ramirez", "Pujols","Griffey","Thomas","Jones", "Rodriguez"]
+var endofLineUp = ["Suzuki"]
+battingLineup.append("Suzuki")
+print("Adding \(battingLineup) to the end of the lineup")
+print("====================")
+battingLineup[1] = "Tejada"
+print(battingLineup)
+
+battingLineup.append("Rayes")
+battingLineup.remove(at: 0)
+print(battingLineup)
+
+```
 
 
 ## Question 7
@@ -207,27 +249,28 @@ input: `["apes", "abba", "apple"]`
 
 output: `"abba"`
 
-var arr: [String]
-let arr = ["apes”, “abba”, “apple”]
+```
+let arr = ["apes","abba","apple"]
 
-var overAllCount = 0
+var overallCount = 0
 var stringWithMostAs = ""
-for str in arr {
-  var localCount = " "
-    in str {
-    if char == "a” {
-           localCount += 1
-           
-       }
-   }
-   if localCount > overAllCount {
-       overAllCount = localCount
-       stringWithMostAs = str
-       print(“NOW current amount of a’s is \(localCount)“)
-   }
-}
-print(“\(stringWithMostAs) has the most a’s which has a count of \(overAllCount)“)
 
+for str in arr {
+
+  var localCount = 0
+  for char in str {
+    if char == "a" {
+      localCount += 1
+    }
+  }
+  // here we will compare a's count
+  if localCount > overallCount {
+    overallCount = localCount
+    stringWithMostAs = str
+  }
+}
+print("\(stringWithMostAs) has the most a's which has a count of \(overallCount)"))
+```
 
 ## Question 7
 
@@ -237,6 +280,16 @@ Input: `[[2,4,1],[3,0],[9,3]]`
 
 Output: `[9,3]`
 
+```
+var sumArray = [Int]() //empty array of typy Int
+
+let arr = [[2,4,1],[3,0],[9,3]]
+for arrOne in arr {
+    
+    sumArray.append(arrOne.reduce(0, +))
+}
+var largestSum = sumArray.max()
+```
 
 ## Question 8
 
